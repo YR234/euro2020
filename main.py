@@ -10,7 +10,7 @@ import os
 while True:
     games_hour = [13, 14, 16, 17, 19, 20]
     now = datetime.datetime.now().hour
-    print(now)
+#     print(now)
     if now not in games_hour:
         time.sleep(10*60)
     else:
@@ -187,7 +187,7 @@ while True:
             # driver.minimize_window()
             driver.get(f'{url}{url_date}')
             time.sleep(3)
-            print("Date")
+#             print("Date")
             games = driver.find_elements_by_class_name('match-row_link')
             for game in games:
                 game_text = game.text.split("\n")
