@@ -10,7 +10,7 @@ import os
 while True:
     games_hour = [16, 17, 19, 20, 22, 23]
     now = datetime.datetime.now().hour
-    if now not in games_hour:
+    if False:
         time.sleep(10*60)
     else:
         headers = {
