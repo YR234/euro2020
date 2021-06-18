@@ -65,7 +65,7 @@ while True:
         chrome_options.add_argument("--no-sandbox")
 
         driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), chrome_options=chrome_options)
-        driver.get("www.google.com")
+        driver.get("https://www.google.com/")
         print(driver.page_source)
         # driver = webdriver.Chrome(ChromeDriverManager().install())
         # driver.minimize_window()
@@ -186,6 +186,7 @@ while True:
             # driver.minimize_window()
             driver.get(f'{url}{url_date}')
             time.sleep(3)
+            print("Date")
             games = driver.find_elements_by_class_name('match-row_link')
             for game in games:
                 game_text = game.text.split("\n")
