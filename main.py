@@ -229,5 +229,5 @@ while True:
             results = fix_sort(results)
             gd.set_with_dataframe(ws, results)
             driver.close()
-        except:
+    except:
             time.sleep(60*5)
