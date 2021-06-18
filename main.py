@@ -8,10 +8,10 @@ import os
 
 
 while True:
-    games_hour = [16, 17, 19, 20, 22, 23]
+    games_hour = [13, 14, 16, 17, 19, 20]
     now = datetime.datetime.now().hour
     print(now)
-    if False:
+    if now not in games_hour:
         time.sleep(10*60)
     else:
         headers = {
@@ -66,8 +66,8 @@ while True:
         chrome_options.add_argument("--no-sandbox")
 
         driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), chrome_options=chrome_options)
-        driver.get("https://www.google.com/")
-        print(driver.page_source)
+#         driver.get("https://www.google.com/")
+#         print(driver.page_source)
         # driver = webdriver.Chrome(ChromeDriverManager().install())
         # driver.minimize_window()
         # PATH = "C:\Program Files\Google\Chrome\Application\chromedriver.exe"
